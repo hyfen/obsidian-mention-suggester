@@ -1,10 +1,10 @@
 {
-	"id": "obsidian-sample-plugin",
-	"name": "Sample Plugin",
-	"version": "1.0.0",
+	"id": "obsidian-mention-suggester",
+	"name": "Mention Suggester",
+	"version": "0.1.0",
 	"minAppVersion": "0.15.0",
-	"description": "This is a sample plugin for Obsidian. This plugin demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
+	"description": "Associate trigger characters (like '@') with a query (like '#person') to show an autocomplete for adding links to commonly-referenced notes.",
+	"author": "Andrew Louis",
+	"authorUrl": "https://hyfen.net",
 	"isDesktopOnly": false
 }
