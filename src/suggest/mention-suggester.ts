@@ -82,7 +82,7 @@ export default class MentionSuggester extends EditorSuggest<INoteCompletion> {
     // TODO: generate wikilink properly
     const wikilink = `[[${suggestion.basename}]]${event.shiftKey ? " " : ""}`;
     
-    activeView.editor.replaceRange(wikilink, this.context.start, this.context.end);
+    view.editor.replaceRange(wikilink, this.context.start, this.context.end);
     this.isActive = false;
   }
 
