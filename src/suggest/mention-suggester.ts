@@ -8,7 +8,7 @@ import {
   MarkdownView,
   TFile,
   getAllTags,
-  fuzzySearch,
+  getFirstLinkpathDest
 } from "obsidian";
 
 interface INoteCompletion {
@@ -79,8 +79,8 @@ export default class MentionSuggester extends EditorSuggest<INoteCompletion> {
       return;
     }
 
-    // TODO: generate wikilink properly
-    const wikilink = `[[${suggestion.basename}]]${event.shiftKey ? " " : ""}`;
+    const linkText = this.app.metadataCache.fileToLinktext(suggestion, "/");
+    const wikilink = `[[${linkText}]]${event.shiftKey ? " " : ""}`;
     
     view.editor.replaceRange(wikilink, this.context.start, this.context.end);
     this.isActive = false;
